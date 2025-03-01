@@ -16,7 +16,10 @@ const config = {
   secret: process.env.SECRET_KEY,
   baseURL: process.env.BASEURL,
   clientID: process.env.CLIENTID,
-  issuerBaseURL: process.env.ISSUERBASEURL
+  issuerBaseURL: process.env.ISSUERBASEURL,
+  routes: {
+    postLogoutRedirect: process.env.CLIENT_URL
+  }
 };
 
 app.use(cors({

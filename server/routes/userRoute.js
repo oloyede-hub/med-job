@@ -5,7 +5,7 @@ import { getUserProfile } from "../controllers/userContoller.js";
 
 router.get("/check-auth", (req, res) => {
     if(req.oidc.isAuthenticated()) {
-        return res.status(200).json({auth: true, user: req.oidc.user})
+        return res.status(200).json({isAuthenticated: true, user: req.oidc.user})
     }else {
         return res.status(200).json(false);
     }
